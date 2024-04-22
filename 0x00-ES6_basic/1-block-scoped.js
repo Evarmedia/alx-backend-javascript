@@ -1,6 +1,6 @@
 export default function taskBlock(trueOrFalse) {
-  var task = false; // Using let to declare variables with block scope
-  var task2 = true; // Using let to declare variables with block scope
+  const task = false;
+  const task2 = true;
 
   if (trueOrFalse) {
     const task = true; // eslint-disable-line no-unused-vars
