@@ -1,11 +1,11 @@
 export default function taskBlock(trueOrFalse) {
-    var task = false;
-    var task2 = true;
-  
-    if (trueOrFalse) {
-      let task = true;
-      let task2 = false;
-    }
-  
-    return [task, task2];
+  let task = false; // Using let to declare variables with block scope
+  let task2 = true; // Using let to declare variables with block scope
+
+  if (trueOrFalse) {
+    let task = true; // No need to redeclare with let, just assign the value
+    let task2 = false; // No need to redeclare with let, just assign the value
   }
+
+  return [task, task2];
+}
