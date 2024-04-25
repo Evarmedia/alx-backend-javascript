@@ -1,19 +1,31 @@
-import HolbertonCourse from './2-hbtn_course';
+class Currency {
+  constructor(code, name) {
+    this._code = code;
+    this._name = name;
+  }
 
-const c1 = new HolbertonCourse('ES6', 1, ['Bob', 'Jane']);
-console.log(c1.name);
-c1.name = 'Python 101';
-console.log(c1);
+  // Getter and Setter for code
+  get code() {
+    return this._code;
+  }
 
-try {
-  c1.name = 12;
-} catch (err) {
-  console.log(err);
+  set code(newCode) {
+    this._code = newCode;
+  }
+
+  // Getter and Setter for name
+  get name() {
+    return this._name;
+  }
+
+  set name(newName) {
+    this._name = newName;
+  }
+
+  // Method to display full currency
+  displayFullCurrency() {
+    return `${this._name} (${this._code})`;
+  }
 }
 
-try {
-  // eslint-disable-next-line no-unused-vars
-  const c2 = new HolbertonCourse('ES6', '1', ['Bob', 'Jane']);
-} catch (err) {
-  console.log(err);
-}
+export default Currency;
